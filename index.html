@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Background Color Example</title>
+    <style>
+      .textbox {
+        width: 200px;
+        height: 30px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Please Select a Color</h1>
+
+    <form>
+      <label for="colorDropdown">Select a color:</label>
+      <select id="colorDropdown" onchange="changeBackgroundColor()">
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+      </select>
+
+      <br /><br />
+
+      <label for="textBox">Text box:</label>
+      <input type="text" id="textBox" class="textbox" />
+    </form>
+  </body>
+  <script>
+    function changeBackgroundColor() {
+      var dropdown = document.getElementById("colorDropdown");
+      var textbox = document.getElementById("textBox");
+
+      var selectedColor = dropdown.value;
+      textbox.style.backgroundColor = selectedColor;
+    }
+  </script>
+</html>
